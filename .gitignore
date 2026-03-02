@@ -8,6 +8,3 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
-
-# Big media files (downloads, user uploads, etc.)
-assets/media/
