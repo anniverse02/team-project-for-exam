@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as *;
+    
+
+.media-tab{
+    @include flex-center;
+    gap:0.6rem;
+    padding:0.9rem;
+    img{
+        width:2.5rem;
+        height:auto;
+        margin-left:6rem;
+    }
+    .media-button{ 
+        flex: 0 0 auto; 
+        padding:0.4rem;
+        border:none;
+        border-radius:0.5rem;
+        background-color:vars.$secondary-color;
+        color:vars.$font-color;
+          &:hover {
+        cursor: pointer;
+        color:vars.$secondary-font-color;
+    }
+}
+}
+
+
+.playlist{
+    padding:0.9rem;
+    display:grid;
+    grid-template-columns: repeat(2,175px);
+    grid-template-rows: repeat(3,58px);
+    gap:0.6rem;
+    color:vars.$font-color;
+&-card{
+    @include flex-center;
+    padding-left:0.5rem;
+    background-color: vars.$secondary-color;
+    border-radius:0.6rem;
+}
+
+.playlist-descr{
+    font-size:0.8rem;
+    padding-left:0.5rem;
+    .song-title{
+        color:vars.$font-color;
+        
+}
+.artist-name{
+    color:vars.$secondary-font-color;
+}
+}
+}
+
