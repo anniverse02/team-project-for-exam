@@ -59,6 +59,9 @@
   display: grid;
   grid-template-columns: 259px 1fr;
   gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+  align-items: start;
 }
 
 @media (max-width: 1200px) {
