@@ -7,23 +7,21 @@ body {
   font-size:1rem;
 }
 .media-tab{
-    @include flex-between;
-    gap:0.6rem;
+    display:flex;
+    gap:10px;
     padding:0.9rem;
-    img{
-        height:auto;
-        
-    }
+   
     .media-button{ 
         flex: 0 0 auto; 
-        padding:0.4rem;
+        padding:0.8rem;
         border:none;
-        border-radius:0.5rem;
+        border-radius:.5rem;
         background-color:vars.$secondary-color;
         color:vars.$font-color;
           &:hover {
         cursor: pointer;
         color:vars.$secondary-font-color;
+        background-color:vars.$font-color; 
     }
 }
 }
@@ -31,7 +29,6 @@ body {
 
 .playlist{
     padding:0.9rem;
-    display:grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.6rem;
@@ -56,6 +53,15 @@ body {
 }
 }
 }
+
+.main-content{
+    width: 100%;
+    max-width: 1200px;
+    border:1px solid rgba(32, 32, 32, 1);
+    border-radius:10px;
+    grid-column:2;
+}
+
 
 /* Recommended Content */
 .recommended-content{
@@ -130,26 +136,20 @@ body {
 }
 
 
-
 /* Desktop Version */
 
-@media (min-width :720px){
-    .media-tab{
-        display:none;
-    }
+@media (min-width :481px){
+  
     .playlist{
         display:none;
     }
- .recommended-content{
-    display:none;
-    justify-content: center;
-    align-items: center;
- }
+
  .recommended-content-header{
    @include flex-between;
    
  }
 
 }
+
 
 
